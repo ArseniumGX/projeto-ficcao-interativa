@@ -12,7 +12,7 @@ class Personagem:
         self.__dinheiro = float()
 
     def __str__(self):
-        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nSede: {}\nDoente: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.doente, self.felicidade, self.remedio, self.comida, self.dinheiro)
+        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nSede: {}\nDoente: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.sede, self.doente, self.felicidade, self.remedio, self.comida, self.dinheiro)
 
 ################ GETTERS AND SETTERS ################
     @property
@@ -20,70 +20,70 @@ class Personagem:
         return self.__nome
     @nome.setter
     def nome(self, value):
-        self.nome = value
+        self.__nome = value
     
     @property
     def genero(self):
         return self.__genero
     @genero.setter
     def genero(self, value):
-        self.genero = value
+        self.__genero = value
 
     @property
     def idade(self):
         return self.__idade
     @idade.setter
     def idade(self, value):
-        self.idade = value
+        self.__idade = value
 
     @property
     def fome(self):
         return self.__fome
     @fome.setter
     def fome(self, value):
-        self.fome = value
+        self.__fome = value
     
     @property
     def sede(self):
         return self.__sede
     @sede.setter
     def sede(self, value):
-        self.sede = value
+        self.__sede = value
 
     @property
     def doente(self):
         return self.__doente
     @doente.setter
     def doente(self, value):
-        self.doente = value
+        self.__doente = value
     
     @property
     def felicidade(self):
         return self.__felicidade
     @felicidade.setter
     def felicidade(self, value):
-        self.felicidade = value
+        self.__felicidade = value
 
     @property
     def remedio(self):
         return self.__remedio
     @remedio.setter
     def remedio(self, value):
-        self.remedio = value
+        self.__remedio = value
 
     @property
     def comida(self):
         return self.__comida
     @comida.setter
     def comida(self, value):
-        self.comida = value
+        self.__comida = value
 
     @property
     def dinheiro(self):
         return self.__dinheiro
     @dinheiro.setter
     def dinheiro(self, value):
-        self.dinheiro = value
+        self.__dinheiro = value
 #####################################################
     
     
