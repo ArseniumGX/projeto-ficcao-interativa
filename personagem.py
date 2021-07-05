@@ -3,16 +3,19 @@ class Personagem:
         self.__nome = str()
         self.__genero = str()
         self.__idade = int()
+        
         self.__fome = bool()
-        self.__sede = bool()
+        self.__sede =  bool()
         self.__doente = bool()
+        self.__alive = bool()
+        
         self.__felicidade = bool()
         self.__remedio = bool()
         self.__comida = bool()
         self.__dinheiro = float()
 
     def __str__(self):
-        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nSede: {}\nDoente: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.sede, self.doente, self.felicidade, self.remedio, self.comida, self.dinheiro)
+        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nSede: {}\nDoente: {}\nVivo: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.sede, self.doente, self.alive, self.felicidade, self.remedio, self.comida, self.dinheiro)
 
 ################ GETTERS AND SETTERS ################
     @property
@@ -57,6 +60,13 @@ class Personagem:
     def doente(self, value):
         self.__doente = value
     
+    @property
+    def alive(self):
+        return self.__alive
+    @alive.setter
+    def alive(self, value):
+        self.__alive = value
+
     @property
     def felicidade(self):
         return self.__felicidade
@@ -106,6 +116,9 @@ class Personagem:
 
     def envelhecer(self):
         self.idade += 1
+
+    def dormir(self):
+        return True
 
     def __seTem(self):
         pass
