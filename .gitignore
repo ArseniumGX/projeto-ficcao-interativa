@@ -1,4 +1,8 @@
-## directories
+## Directories
 __pycache__
 vscode
 tests
+
+## Files
+tests.py
+test.py
