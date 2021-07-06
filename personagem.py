@@ -105,10 +105,14 @@ class Personagem:
     
     def beber(self):
         self.sede = False
+        return True
     
     def tomarRemedio(self):
         if self.remedio:
             self.doente = False
+            return True
+        else:
+            return False
     
     def jogar(self):
         self.felicidade = True
@@ -118,7 +122,18 @@ class Personagem:
         self.idade += 1
 
     def dormir(self):
-        return True
+        self.fome = True
+        self.sede = True
+        return 'Boa noite {}'.format(self.nome)
 
-    def __seTem(self):
-        pass
+    def comprar(self, item):
+        if item == 'REMEDIO' and self.dinheiro >= 7.0:
+            self.remedio = True
+            self.dinheiro -= 7.0
+            return True
+        elif item == 'COMIDA' and self.dinheiro >= 3.0:
+            self.comida = True
+            self.dinheiro -= 3.0
+            return True
+        else:
+            return False
