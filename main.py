@@ -2,8 +2,9 @@ from personagem import Personagem
 from functions import clear, menu
 from random import choice, randint
 from time import sleep
+from PedraPapelTesoura.Projeto02JokenPo import jokenpo
 
-# Nome do projeto: ?
+# Nome do projeto: My Crab
 
 if __name__ == '__main__':
     clear()
@@ -84,6 +85,7 @@ if __name__ == '__main__':
             elif action == 2: ## Tomar água
                 if creature.beber():
                     print('Bebido')
+            
             elif action == 3: ## Tomar medicamento
                 if creature.tomarRemedio():
                     print('\t\t\tMedicamento tomado!')
@@ -103,7 +105,8 @@ if __name__ == '__main__':
                     print('Você não tem dinheiro suficiente!')
 
             elif action == 6: ## Opção de jogos
-                pass 
+                creature.dinheiro += jokenpo(creature.nome)
+                creature.felicidade = True
             
             elif action == 7: ## Dormir
                 creature.envelhecer()
