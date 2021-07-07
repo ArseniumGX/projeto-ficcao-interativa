@@ -5,7 +5,7 @@ class Personagem:
         self.__idade = int()
         
         self.__fome = bool()
-        self.__sede =  bool()
+        self.__sono =  bool()
         self.__doente = bool()
         self.__alive = bool()
         
@@ -15,7 +15,7 @@ class Personagem:
         self.__dinheiro = float()
 
     def __str__(self):
-        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nSede: {}\nDoente: {}\nVivo: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.sede, self.doente, self.alive, self.felicidade, self.remedio, self.comida, self.dinheiro)
+        return 'Nome: {}\nGênero: {}\nIdade: {}\nFome: {}\nsono: {}\nDoente: {}\nVivo: {}\nFelicidade: {}\nRemedio: {}\nComida: {}\nDinheiro: {}'.format(self.nome, self.genero, self.idade, self.fome, self.sono, self.doente, self.alive, self.felicidade, self.remedio, self.comida, self.dinheiro)
 
 ################ GETTERS AND SETTERS ################
     @property
@@ -47,11 +47,11 @@ class Personagem:
         self.__fome = value
     
     @property
-    def sede(self):
-        return self.__sede
-    @sede.setter
-    def sede(self, value):
-        self.__sede = value
+    def sono(self):
+        return self.__sono
+    @sono.setter
+    def sono(self, value):
+        self.__sono = value
 
     @property
     def doente(self):
@@ -94,6 +94,7 @@ class Personagem:
     @dinheiro.setter
     def dinheiro(self, value):
         self.__dinheiro = value
+        
 #####################################################
     
     
@@ -102,14 +103,15 @@ class Personagem:
     def comer(self):
         if self.comida:
             self.fome = False
-    
-    def beber(self):
-        self.sede = False
-        return True
+            self.comida = False
+            return True
+        else: 
+            return False
     
     def tomarRemedio(self):
         if self.remedio:
             self.doente = False
+            self.remedio = False
             return True
         else:
             return False
@@ -123,7 +125,7 @@ class Personagem:
 
     def dormir(self):
         self.fome = True
-        self.sede = True
+        self.sono = True
         return 'Boa noite {}'.format(self.nome)
 
     def comprar(self, item):

@@ -10,13 +10,39 @@ def clear(): # Função limpa o terminal
     else:
         return None
 
+
 def menu(): # função de exibição do menu de ações
     print('''
+    Selecione uma ação: 
+
     [ 1 ] Comer
-    [ 2 ] Tomar um copo d'água
-    [ 3 ] Tomar um xaropé
-    [ 4 ] Comprar comida
-    [ 5 ] Comprar remédio
-    [ 6 ] Jogar um jogo
-    [ 7 ] Ir dormir
+    [ 2 ] Tomar um xarope
+    [ 3 ] Comprar comida
+    [ 4 ] Comprar remédio
+    [ 5 ] Jogar um jogo
+    [ 6 ] Ir dormir
     ''')
+
+
+def creditos() :
+    import sys
+    from time import sleep
+    bio = '''
+              Obrigado por jogar!
+
+                  Criado por
+
+            Akylles Ferreira Barros
+              José Pereira Macedo
+        Victor Fernando Moura da Luz Santos
+
+
+    
+    '''
+    for c in bio :
+        sys.stdout.flush()
+        print(c, end= '')
+        sleep(0.05)
+
+    input('Tecle ENTER para encerrar o programa.')
+

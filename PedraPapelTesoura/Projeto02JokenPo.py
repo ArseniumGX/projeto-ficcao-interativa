@@ -121,7 +121,7 @@ def jokenpo(name):
                 os.system('cls' if os.name == 'nt' else 'clear')        
             if contadorvitorias>contadorderrotas:
                 money+=4.0
-                print("""Voce é o grande campeão !!!!
+                print(f"""Boaaa {name}, Voce é o grande campeão !!!!
                 ⣿⣿⣿⠟⠛⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢋⣩⣉⢻
                 ⣿⣿⣿⠀⣿⣶⣕⣈⠹⠿⠿⠿⠿⠟⠛⣛⢋⣰⠣⣿⣿⠀⣿
                 ⣿⣿⣿⡀⣿⣿⣿⣧⢻⣿⣶⣷⣿⣿⣿⣿⣿⣿⠿⠶⡝⠀⣿
@@ -139,7 +139,7 @@ def jokenpo(name):
                 # pygame.mixer.music.load('stage-clear-8-bit.wav')
                 # pygame.mixer.music.play()
             elif contadorvitorias<contadorderrotas:
-                print("""Você foi derrotado pela maquina 
+                print(f"""{name} foi derrotado pela máquina ☹
                 [blue]
                 ▄██████████████▄▄▄   ▐█▄▄▄▄█▌
                 ██████▌ ▄▌ ▄ ▐ ▐▌ ███▌▀▀██▀▀
