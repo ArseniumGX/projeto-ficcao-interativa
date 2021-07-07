@@ -4,28 +4,28 @@ def jokenpo(name):
     from rich import print
     from time import sleep
     import pygame
-    # pygame.init()
+    
     contadorvitorias=0
     contadorderrotas=0
     jogadadamaquina=0
     money=0
     votacao=""
     pedra=("""
-                _______
+                  _______
             -----'   ____)
                     (_____)
                     (_____)
                     (____)
             -----.__(___)""")
     papel=("""
-                ______
+                 ______
             ----'   ____)_____
                         ______)
                         _______)
-                    _______)
+                       _______)
             -----.__________)   """)
     tesoura=(""" 
-                _______
+                  _______
             -----'   ____)____
                         ______)
                     __________)
@@ -35,11 +35,8 @@ def jokenpo(name):
     while True:
             print("""[green]Olá, bem vindo a jogo do pedra,papel,tesoura :D[/green]
                                             ✂️  ✊  📃 
-                """)
-            # pygame.mixer.music.load('game_theme.wav')
-            # pygame.mixer.music.play()        
+                """)    
             rodadas=int(input("Gostaria de jogar quantas rodadas? Vence o jogador que atigir o maior numero de pontos ao fim das rodadas:  "))
-            # pygame.mixer.music.stop()
             for i in range(rodadas):
                 print(f"""                  Contador de Pontos
                 _____________________________
@@ -69,8 +66,6 @@ def jokenpo(name):
                 sleep(0.5)
                 print("POOH!!!\n")                     
                 if jogada==1:
-                    # pygame.mixer.music.load('stone.wav')
-                    # pygame.mixer.music.play()
                     if jogadadamaquina==1:
                         print("Empate!") 
                     elif jogadadamaquina==2:
@@ -82,8 +77,6 @@ def jokenpo(name):
                     print(f"""O {name} lança
                             [green]{pedra}[/green]""")
                 elif jogada==2:
-                    # pygame.mixer.music.load('paper.wav')
-                    # pygame.mixer.music.play()
                     if jogadadamaquina==1:
                         print("Você Ganhou!")
                         contadorvitorias=contadorvitorias+1  
@@ -95,8 +88,6 @@ def jokenpo(name):
                     print(f"""O {name} lança
                             [green]{papel}[/green]""")
                 elif jogada==3:
-                    # pygame.mixer.music.load('razor.wav')
-                    # pygame.mixer.music.play()
                     if jogadadamaquina==1:
                         contadorderrotas=contadorderrotas+1
                         print("Você perdeu!")                                 
@@ -136,8 +127,6 @@ def jokenpo(name):
                 ⣿⣿⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸
                 ⣿⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸
                 """)
-                # pygame.mixer.music.load('stage-clear-8-bit.wav')
-                # pygame.mixer.music.play()
             elif contadorvitorias<contadorderrotas:
                 print(f"""{name} foi derrotado pela máquina ☹
                 [blue]
@@ -145,8 +134,8 @@ def jokenpo(name):
                 ██████▌ ▄▌ ▄ ▐ ▐▌ ███▌▀▀██▀▀
                 ████▄█▌ ▄▌ ▄ ▐ ▐▌ ▀███▄▄█▌
                 ▄▄▄▄▄██████████████▀[/blue] """)
-                # pygame.mixer.music.load('game-lose.wav')
-                # pygame.mixer.music.play()       
+                
+                       
             else:
                 print("""O Jogo ficou empatado !
                 
@@ -161,8 +150,7 @@ def jokenpo(name):
                 ▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌
                 ▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌
                 █▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█ """)
-                # pygame.mixer.music.load('draw-game.wav')
-                # pygame.mixer.music.play()  
+                  
             print(f""" PLACAR FINAL :     
                     A maquina ganhou {contadorderrotas} rodadas
                     Você venceu {contadorvitorias} rodadas
