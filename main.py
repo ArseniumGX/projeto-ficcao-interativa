@@ -1,10 +1,7 @@
-import os
-from platform import system
-import sys
 from personagem import Personagem
 from functions import clear, menu, creditos
 from random import choice, randint
-from time import sleep, time
+from time import sleep
 from PedraPapelTesoura.Projeto02JokenPo import jokenpo
 from rich import print
 
@@ -30,7 +27,7 @@ if __name__ == '__main__':
 
 # Incio Código
 
-    os.system('cls')
+    clear()
     print('''
     Bem Vindo(a) ao My Crab! 🦀
 
@@ -42,20 +39,20 @@ if __name__ == '__main__':
     '''.format(creature.genero))
 
     creature.nome = input('    Dê um nome ao seu Crab: ') or 'Sirigueijo'
-    os.system('cls')
+    clear()
 
     
     while creature.alive: # Controle dos Dias
         creature.sono = False
         contadorSono = 0
         dia += 1
-        creature.doente = choice([True, False])
-
+        
 
         while True: # Controla as ações do dia do Crab
 
-            if creature.fome  and creature.doente  : 
+            if creature.fome and creature.doente: 
                 creature.felicidade = False
+
 
             #Status do Crab
             print(f'''   
@@ -126,47 +123,52 @@ if __name__ == '__main__':
 
 
             if action == 1: ## Comer
+                contadorSono += 1
                 if creature.comer():
-                    os.system('cls')
+                    clear()
                     print('\t\t\tHmm, que delícia, estou satisfeito! 🍖🍤')
                     sleep(2)
                 else:
-                    os.system('cls')
+                    clear()
                     print('\t\t\tNão tenho comida!!!🦴🦴🦴')
                     
 
             elif action == 2: ## Tomar medicamento
+                contadorSono += 1
                 if creature.tomarRemedio():
-                    os.system('cls')
+                    clear()
                     print('\t\t\tUrghh, que remédio ruim...!')
                 else:
-                    os.system('cls')
+                    clear()
                     print('\t\t\tEu não tenho remédio nenhum...')
 
 
             elif action == 3: ## Comprar comida
+                contadorSono += 1
                 if creature.comprar('COMIDA'):
-                    os.system('cls')
+                    clear()
                     print('\t\t\tVocê gastou 3 moedas 💰💰💰 ...')
                     sleep(1)
                     print('\t\t\t...Enchendo o estoque de comida 🍖🍤🍗...')
                 else:
-                    os.system('cls')
+                    clear()
                     print('\t\t\tVocê não tem dinheiro suficiente para comprar comida!💸')
 
 
             elif action == 4: ## Comprar Remédio
+                contadorSono += 1
                 if creature.comprar('REMEDIO'):
-                    os.system('cls')
+                    clear()
                     print('\t\t\tVocê gastou 7 moedas 💰💰💰💰💰💰💰 ...')
                     sleep(1)
                     print('\t\t\t...Enchendo o estoque de Remédio!!💉💊')
                 else:
-                    os.system('cls')
+                    clear()
                     print('\t\t\tVocê não tem dinheiro suficiente para comprar esse xarope!💸')
 
 
             elif action == 5: ## Opção de jogos
+                contadorSono += 1
                 creature.dinheiro += jokenpo(creature.nome)
                 creature.felicidade = True
             
@@ -174,28 +176,27 @@ if __name__ == '__main__':
             elif action == 6: ## Dormir
                 creature.envelhecer()
                 creature.dormir()
-                os.system('cls')
+                clear()
                 print('\t\t\tZzzZzZzZzzZzZzZzzZzZzZzzZzZz')
                 sleep(2)
                 print('\t\t\tSonhando com as algas...💤💤')
                 sleep(2)
-                os.system('cls')
+                clear()
                 break
             
 
             else:
                 print('\t\t\tAção inválida')
 
-            sleep(3) 
+            sleep(3)
             
             # Controle de sono que evita que exista ações diárias infinitas.
-            contadorSono += 1
-            if contadorSono == 5 : #Troca estado Crab para SONO ( Aviso )
+            if contadorSono == 4 : #Troca estado Crab para SONO ( Aviso )
                 creature.sono = True
                 print('\t\t\tEstou com muito sono💤... preciso dormir...💤💤')
                 sleep(2)
-            elif contadorSono == 7 : # Força o Crab a dormir.
-                os.system('cls')
+            elif contadorSono == 6 : # Força o Crab a dormir.
+                clear()
                 print('\t\t\tNão aguentei...Dormindo...💤')
                 sleep(2)
                 print('\t\t\tTem tubarões me perseguindo!...💤💤')
@@ -203,10 +204,15 @@ if __name__ == '__main__':
                 creature.envelhecer()
                 creature.dormir()
                 creature.felicidade = False
-                os.system('cls')
+                clear()
                 break
 
-            os.system('cls')  
+            clear()
+
+        if not creature.doente:
+            creature.doente = choice([True, False])
+        if creature.felicidade:
+            creature.felicidade = choice([True, False])
 
         # Passa o estado do personagem para pior. 
         if perigo < 25:
@@ -224,5 +230,6 @@ if __name__ == '__main__':
             ''') 
 
     creditos() # Imprime os créditos do game. 
+    clear()
 
 
