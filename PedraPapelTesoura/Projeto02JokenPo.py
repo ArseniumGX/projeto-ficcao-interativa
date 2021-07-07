@@ -3,8 +3,7 @@ def jokenpo(name):
     from random import randint
     from rich import print
     from time import sleep
-    import pygame
-    
+      
     contadorvitorias=0
     contadorderrotas=0
     jogadadamaquina=0
