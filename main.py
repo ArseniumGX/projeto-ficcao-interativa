@@ -1,5 +1,5 @@
 from personagem import Personagem
-from functions import clear, menu, creditos
+from functions import clear, menu, creditos, statusMenu
 from random import choice, randint
 from time import sleep
 from PedraPapelTesoura.Projeto02JokenPo import jokenpo
@@ -55,35 +55,9 @@ if __name__ == '__main__':
 
 
             #Status do Crab
-            print(f'''   
-            ⏱  Dia: {dia}
-            -----=== Situação do do seu bichinho ===-----
+            statusMenu(dia, creature.nome, creature.idade, creature.dinheiro, creature.felicidade)
 
-                             🦀 {creature.nome} 🦀
 
-            Idade: {creature.idade} dia(s)\t          💰 Moedas: {creature.dinheiro}''')
-
-            if creature.felicidade == True:
-                print('''[orange1]
-                        ░░▄█▀▀▀░█▀█░█▀█░░░▀▀▀█▄
-                        ▄███▄▄░░▀▄███▄▀░░░▄▄███▄
-                        ▀██▄▄▄▄██▀███▀█▄▄▄▄██▀
-                        ░░▄▄▄▄████▄▄▄████▄▄▄▄
-                        ░▐▐▀▐▀░▀██████▀░▀▌▀▌▌
-                [/orange1]''')
-            else :
-                print('''[purple]
-                        ░░▄█▀▀▀░███░███░░░▀▀▀█▄
-                        ▄███▄▄░░▀▄███▄▀░░░▄▄███▄
-                        ▀██▄▄▄▄██▀▀▀▀▀█▄▄▄▄██▀
-                        ░░▄▄▄▄███▄███▄██▄▄▄▄
-                        ░▐▐▀▐▀░▀██████▀░▀▌▀▌▌
-                [/purple]''')
-
-            print('''
-                                Status  
-            ''')
-            
             if creature.fome == True:
                 print('             - 🍴 Estou com fome!')
                 perigo += 1

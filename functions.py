@@ -41,24 +41,33 @@ def creditos() :
     input('Tecle ENTER para encerrar o programa.')
 
 
-def menuJogos(): ## Não implementado
-    print('''
-    O que deseja jogar? 
+def statusMenu(dia, nome, idade, dinheiro, felicidade):
+    from rich import print
+    print(f'''   
+            ⏱  Dia: {dia}
+            -----=== Situação do do seu bichinho ===-----
 
-    [ 1 ] Jokenpô
-    [ 2 ] Jogo 2
+                             🦀 {nome} 🦀
 
-    [ 0 ] Voltar
-    ''')
+            Idade: {idade} dia(s)\t          💰 Moedas: {dinheiro}''')
 
-    op = str(input('\t .: '))
-    while not op.isdigit() or op in '':
-        op = str(input('\t\tOpção inválida!\n\t .: '))
-    op = int(op)
-    
-    if op == 1:
-        pass
-    elif op == 2:
-        pass
-    if op == 0:
-        return None
+    if felicidade == True:
+        print('''[orange1]
+                        ░░▄█▀▀▀░█▀█░█▀█░░░▀▀▀█▄
+                        ▄███▄▄░░▀▄███▄▀░░░▄▄███▄
+                        ▀██▄▄▄▄██▀███▀█▄▄▄▄██▀
+                        ░░▄▄▄▄████▄▄▄████▄▄▄▄
+                        ░▐▐▀▐▀░▀██████▀░▀▌▀▌▌
+                [/orange1]''')
+    else :
+        print('''[purple]
+                        ░░▄█▀▀▀░███░███░░░▀▀▀█▄
+                        ▄███▄▄░░▀▄███▄▀░░░▄▄███▄
+                        ▀██▄▄▄▄██▀▀▀▀▀█▄▄▄▄██▀
+                        ░░▄▄▄▄███▄███▄██▄▄▄▄
+                        ░▐▐▀▐▀░▀██████▀░▀▌▀▌▌
+                [/purple]''')
+
+        print('''
+                                Status  
+            ''')
