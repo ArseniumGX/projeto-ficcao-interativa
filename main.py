@@ -22,7 +22,6 @@ if __name__ == '__main__':
     creature.comida = False # nasce sem comida. Aqui não tem facilidade
     creature.dinheiro = 20.0 # Auxilio Emergencial Covid
     creature.alive = True # Evitar + Whiles True
-    contadorNegativo = False
 
 
 # Incio Código
@@ -141,7 +140,7 @@ if __name__ == '__main__':
                     print('\t\t\tVocê não tem dinheiro suficiente para comprar esse xarope!💸')
 
 
-            elif action == 5: ## Opção de jogos
+            elif action == 5: ## Opção de jogo
                 contadorSono += 1
                 creature.dinheiro += jokenpo(creature.nome)
                 creature.felicidade = True
