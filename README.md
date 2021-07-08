@@ -5,15 +5,30 @@
 
 
 ---
-<img src="https://media.giphy.com/media/qOchFSZN7zIf0t8Nh1/giphy.gif" alt="Crab.gif"/>
+<p align="center"><img src="https://media.giphy.com/media/qOchFSZN7zIf0t8Nh1/giphy.gif" alt="Crab.gif" /></p>
 
-<div><p align="justify">
+<div><p align="center">
 Este é o jogo de ficção interativa My Crab. Nele sua missão é única: sobreviver o máximo de dias possiveis.</p>
 
 <p align="center"><img src="./img/inicio.jpg" /></p>
 
-<p align="justify">Dê um nome ao seu Crab e veja a ação acontecer. Não espere muita moleza, coisas ruins vão acontecer.</p>
+<p align="center">Dê um nome ao seu Crab e veja a ação acontecer. Não espere muita moleza, coisas ruins vão acontecer.</p>
+
 <p align="center"><img src="./img/toptop.jpg" /></p>
+
+<p align="center">Cuide bem de mim, é o que você precisa fazer...</p>
+
+<p align="center"><img src="./img/no-ruim.jpg"></p>
+
+<p align="center">Escolha o que fazer...</p>
+
+<p align="center"><img src="./img/acao.jpg"></p>
+
+<p align="center">Mas cuidado, escolhas erradas pode levar a uma morte prematura...</p>
+
+<p align="center"><img src="./img/game-over.jpg"></p>
+
+<p align=""></p>
 
 
 </div>
