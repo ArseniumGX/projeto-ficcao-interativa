@@ -1,7 +1,6 @@
-<h1 align="center">Blue EdTech - Módulo I</h1>
-<h3 align="center">Projeto final - Ficção Interativa</h2>
+<h1 align="center">Projeto final - Ficção Interativa</h1>
 
-<p align="justify">&emsp;Projeto final do curso de certificação da Blue EdTech apresentado avaliação do final do módulo I - Lógica de programação - sobre um jogo de ficção interativa usando todos os conceitos aprendidos no decorrer do módulo. Como requisito obrigatório, neste projeto foi feito o uso de classe. O trabalho foi desenvolvido em grupo.</p>
+<p align="justify">&emsp;Projeto sobre um jogo de ficção interativa usando todos os conceitos aprendidos em python. Como requisito obrigatório, neste projeto foi feito o uso de classe. O trabalho foi desenvolvido em grupo.</p>
 
 
 ---
